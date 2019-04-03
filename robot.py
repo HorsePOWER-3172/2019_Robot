@@ -10,7 +10,7 @@ class Apollo(wpilib.TimedRobot):
         self.xbox = wpilib.XboxController(0)
         self.lift_lock = Toggle(self.xbox, 4, 0.5)
 
-        zself.left_drive_motor_group = wpilib.SpeedControllerGroup(wpilib.Talon(0), wpilib.Talon(1))
+        self.left_drive_motor_group = wpilib.SpeedControllerGroup(wpilib.Talon(0), wpilib.Talon(1))
         self.right_drive_motor_group = wpilib.SpeedControllerGroup(wpilib.Talon(2), wpilib.Talon(3))
 
         self.drive = DifferentialDrive(self.left_drive_motor_group, self.right_drive_motor_group)
